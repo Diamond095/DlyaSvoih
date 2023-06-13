@@ -1,0 +1,59 @@
+.form-group label {
+    font-size: 24px;
+    max-width: 400px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.form-group label span {
+    margin-left: 230px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    transform: translateY(20%);
+}
+
+form .form {
+   width:500px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.form  {
+
+   margin-left: 250px;
+}
+form .form div {
+margin-bottom: 10px;
+
+}
+
+form .form div input {
+    width: 100%;
+    max-width: 250px;
+}
+
+.form-row div div input {
+    width: 100%;
+
+    max-width: 250px;
+}
+
+div .form-group input {
+
+    max-width: 250px;
+}
+
+div .form-group label span {
+    margin-left: 125px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+

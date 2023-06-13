@@ -1,0 +1,43 @@
+.image-card{
+   display: flex;
+   flex-wrap: wrap;
+   max-width:1300px;
+   margin-top:80px;
+   margin: 0 auto;
+   align-items: center;
+   margin-left:350px;
+ }
+ 
+ .card {
+  display: flex;
+  flex-direction: column;
+  border-style:none;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  width: 500px;
+  border-width: 3px;
+  width: 150%;
+  height: 500px;
+}
+
+ span {
+   margin-left: 80px;
+   font-size: 20px;
+ }
+ 
+ img {
+  border-style:none;
+  border-radius:20px;
+  border-top-left-radius: 20px;
+ }
+ 
+ h1 {
+   font-size: 25px;
+ }
+ 
+ h2 {
+   font-size: 17px;
+ }
+ button{
+   color:aquamarine;
+ }
