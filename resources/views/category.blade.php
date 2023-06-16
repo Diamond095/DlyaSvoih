@@ -5,7 +5,7 @@
 <h3>{{$category->name}}</h3>
  <ul class="navbar-1">
  @foreach($categories as $category_nav_bar)
- <li class="nav"><a href="{{$category_nav_bar->code}}">{{$category_nav_bar->name}}</a></li>
+ <li class="nav"><a class="nav-1" href="{{$category_nav_bar->code}}">{{$category_nav_bar->name}}</a></li>
 @endforeach
 </ul>
  <div class="image-card">
@@ -20,3 +20,4 @@
    </div>
 </div>
 </body>
+@include('layouts.footer')

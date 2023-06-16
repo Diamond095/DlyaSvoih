@@ -58,3 +58,4 @@
 
 <button type="submit" class="btn btn-primary">Заказать</button>
 </form>
+@include('layouts.footer')

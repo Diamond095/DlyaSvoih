@@ -11,6 +11,9 @@
 *::after {
   box-sizing: border-box;
 }
+.section-cart__body{
+  margin-bottom:50px;
+}
 
 /* Links */
 a, a:link, a:visited {
