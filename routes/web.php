@@ -21,6 +21,9 @@ Route::get('/category/{code}',[MainController::class,'category'])->name('categor
 Route::get('/reviews',[ReviewsController::class,'reviews_soon']);
 Route::get('/basket',[BasketController::class,'get_basket']);
 Auth::routes();
+Route::get('/modal',function(){
+   return view('modalwindow');
+});
 
 
 

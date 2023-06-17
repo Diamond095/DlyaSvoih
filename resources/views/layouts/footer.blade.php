@@ -41,7 +41,7 @@
   </footer>
   </section>
 
-
+</div>
 <script>
 const elementToShow = document.getElementById('footer');
 const buttonToHide = document.querySelector('.fa-bars');
@@ -56,10 +56,6 @@ exit.addEventListener('click',()=>{
  document.querySelector('.footer').style.marginTop='250px';
 }
 })
-if(window.location.pathname.split('/')[1]=='category' && document.querySelector('.card')==null){
- document.querySelector('.footer').style.marginTop='250px';
-}
-
 
 </script>
 </body>
