@@ -1,0 +1,29 @@
+iframe{
+    display: flex;
+    margin:0 auto; 
+    text-align: center;
+    width:70vw;
+    height: 40vw;
+    margin-bottom: 30px;
+}
+p{
+font-family: 'IBM Plex Serif', serif;
+    display:flex;
+    text-align: center;
+    margin:auto;
+    width: 70vw;
+    margin-bottom: 20px;
+    font-size:22px;
+}
+.header-dostavka{
+    margin:auto;
+    margin-top:30px;
+    margin-bottom: 30px;
+    display:flex;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+@media(max-width:450px){
+    h1.header-dostavka{
+        margin-left: 19vw;
+    }
+}

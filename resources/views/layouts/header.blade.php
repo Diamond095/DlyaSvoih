@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar 1</title>
-    <link rel="stylesheet" href="{{asset('css/style_of_header.css')}}" />
+    <link rel="stylesheet" href="http://dlyasvoih.by/public/css/style_of_header.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Oswald&display=swap" rel="stylesheet">
@@ -22,44 +22,54 @@
       </div>
       <ul class="nav-bar">
         @guest
-        <li><a href="/basket">Корзина</a></li>
-        <li><a href="">Доставка</a></li>
-        <li><a href="">О нас</a></li>
+        <li><a href="{{route('main')}}">Главная</a></li>
+        <li><a href="{{route('basket')}}">Корзина</a></li>
+        <li><a href="{{route('dostavka')}}">О Доставке</a></li>
+        <li><a href="{{route('aboutus')}}">О нас</a></li>
         @endguest
         @auth
-        <li><a href="">Заказы</a></li>
+        <li><a href="{{route('orders')}}">Заказы</a></li>
         @endauth
-        <li><a href="/reviews">Отзывы</a></li>
+        <li><a href="{{route('review')}}">Отзывы</a></li>
       </ul>
       <i class="fa fa-bars" aria-hidden="true"></i>
     </nav>
     <div class="sidebar">
-      <div class="sidebar-header">
-        <i class="fa fa-times" aria-hidden="true"></i>
+      <div id="sidebar-header" class="sidebar-header">
+        <i class="fa fa-times"  aria-hidden="true"></i>
       </div>
       <ul class="menu">
         @guest
-        <li><a href="/basket">Корзина</a></li>
-        <li><a href="">Доставка</a></li>
-        <li><a href="">О нас</a></li>
+        <li><a href="{{route('main')}}">Главная</a></li>
+        <li><a href="{{route('basket')}}">Корзина</a></li>
+        <li><a href="{{route('dostavka')}}">O Доставке</a></li>
+        <li><a href="{{route('aboutus')}}">О нас</a></li>
         @endguest
         @auth
-        <li><a href="">Заказы</a></li>
+        <li><a href="{{route('orders')}}">Заказы</a></li>
         @endauth
        
         <li class="dropdown">
           <a>Категории
-         <i class="fas fa-angle-down" id="down"></i>
+         <i  onclick="replaceElement()" class="fas fa-angle-down" id="down"></i>
+         <i onclick="replaceElement()"  class="fas fa-angle-up" id="up"></i>
           </a>
-          <ul class="hidden" class="category-list">
-            @foreach ($categories as $category)
-              <li><a href="{{route('category',$category->code)}}">{{$category->name}}</a></li>  
+          <ul class="hidden" id="categoryList">
+            @foreach($categories as $category)
+              <li><a href="{{route('category',$category->code)}}">{{$category->name}}</a></li> 
             @endforeach
           </ul>
         </li>
         <li><a href="/reviews">Отзывы</a></li>
       </ul>
     </div>
+    <style>
+     @media (max-width:500px) and  (min-width:400px){
+.fa-times{
+  transform: translate(0px,-10px);
+}
+ }
+    </style>
     <script>
     const bars = document.querySelector(".fa-bars");
 const sidebar = document.querySelector(".sidebar");
@@ -75,29 +85,25 @@ closingButton.addEventListener("click", () => {
 
 </script>
    <script>
-   /** const bars = document.querySelector(".fa-bars");
-const sidebar = document.querySelector(".sidebar");
-const closingButton = document.querySelector(".fa-times");
-
-bars.addEventListener("click", () => {
-  sidebar.classList.toggle("show-sidebar");
-});
-
-closingButton.addEventListener("click", () => {
-  sidebar.classList.remove("show-sidebar");
-});*/
-const buttonDown=document.getElementById('down');
-
-buttonDown.addEventListener("click",()=>{
-  buttonDown.classList.replace("fa-angle-down","fa-angle-up");
-});
-
-const buttonUp=document.querySelector('fa-angle-up');
-if(buttonUp!=null){
-button.addEventListener("click",()=>{
-  buttonUp.classList.replace('fa-angle-up','fa-angle-down');
-})
+function replaceElement() {
+  var buttonDown = document.getElementById("down");
+  var buttonUp = document.getElementById("up");
+  if (buttonDown.style.display !== 'none') {
+    buttonDown.style.display = 'none';
+    buttonUp.style.display = 'contents';
+  } else {
+    buttonUp.style.display = 'none';
+    buttonDown.style.display = 'contents';
+  }
+  var myList = document.getElementById("categoryList");
+  if (myList.style.maxHeight) {
+    myList.style.maxHeight = null;
+  } else {
+    myList.style.maxHeight = myList.scrollHeight + "px";
+  }
 }
+
+
    </script>
    </body>
 </html>

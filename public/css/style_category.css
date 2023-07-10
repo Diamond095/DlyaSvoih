@@ -1,32 +1,53 @@
-h3{ 
+h3.header-1{ 
     text-align: center;
-    font-size:50px;
-    margin-top:200px;
-    margin-bottom: 30px;
-    margin-left:217px;
+    font-size:3.5vw;
+    margin-top:2.5vw;
+    margin-bottom: 25px;
+    margin-left:5vw;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Oswald', sans-serif;
 }
 
-.navbar-1 {
-    position:fixed;
+.nav-1{
+   margin-left:4vw;
+   margin-right: 4vw;
+}
+.container-5{
+   flex-grow: 1;
+}
+.container-6{
+   flex-grow:1;
+   min-height: 100vh;
+}
+.navbar-1{
+   z-index: 6;
     background-color: #ffffff;
-    width: 200px;
+    width: 20vw;
     margin:0;
     padding:0;
-    float: left;
+    float:left;
+    display:flex;
+    text-align: center;
+    flex-wrap: wrap;
     list-style-type: none;
     border-style:solid;
     border-radius:10px;
-    margin-left:65px;
+    margin-left:5vw;
+    margin-bottom:60px;
+    margin-right: 5vw;
  }
 
  .navbar-1 li {
     display: block;
     height:66,6px;
+    text-align: center;
+    width:20vw;
  }
-
+li.nav{
+   height: 6vw;
+}
  .navbar-1 a {
+
     display: block;
     color: rgb(4, 0, 0);
     text-align: center;
@@ -36,6 +57,63 @@ h3{
     font-family: 'Oswald', sans-serif;
  }
  .navbar-1 a:hover {
+    margin-left:0px;
+    width:19.7vw;
+    height:6vw;
     background-color: #189907;
     border-radius:7px;
+    color:#ffffff;
  }
+
+
+@media (min-width: 1200px) {
+h3.header-1{
+   margin-left:5vw;
+}
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+.navbar-1{
+   float: left;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+.header-1{
+   margin-left:15vw;
+   text-align: center;
+}
+}
+@media (max-width: 767px) {
+   .navbar-1{
+      display:none;
+   }
+   h3.header-1{ 
+      text-align: center;
+      float:left;
+      font-size:30px;
+
+      margin-top:25px;
+      display: flex;
+      margin-left: 43vw;
+      margin-right: 43vw; 
+      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Oswald', sans-serif;
+  }
+  
+}
+
+@media (max-width: 480px) {
+.navbar-1{
+   display:none;
+}
+h3.header-1{ 
+   text-align: center;
+   font-size:30px;
+   margin-top:25px;
+   display: block; 
+   font-family: 'Josefin Sans', sans-serif;
+   font-family: 'Oswald', sans-serif;
+}
+}
+

@@ -1,52 +1,210 @@
-div div em img{
-    max-width: 400px;
-    max-height: 300px;
-    transform: translate(-35px,-5px);
-    color: #000000;
-}
-
-.header{
-
-    border-color: #045b1e;
-    border-style: solid;
-    background: #3d9a07;
-    height:90px;
-    padding-bottom: 20px;
-    justify-content:space-between;
-    align-items: center;
-    display: flex;
-    padding: 30px 15px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    margin-top: 20px;
-    max-width: 1330px;
-    border-radius:30px;
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body{
-    background-color: #808000;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
-ul.navbar{
-    color:#ffffff;
-    display: flex;
-    list-style: none;
+.container-2{
+    display:flex;
+    flex-direction:column; 
+    min-height: 100vh; 
+}
+body {
+  background-color: #ffffff;
+}
+.nav-bar a{
+    font-size:130%;
+}
+.hidden{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+   
+}
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
-ul.navbar li a{
-    margin-left:120px;
+.menu{
+    margin-top: 40px;
+}
+nav ul {
+  margin-top:10px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+.menu a{
+    margin-bottom: 10px;
+}
+.IMG img{
+    width:150px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+  color: #000000;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: all;
+  transition-duration: 300ms;
+  border-bottom: 1px solid rgba(255, 68, 0, 0);
+}
+
+
+nav ul li a:hover {
+  color: rgb(0, 110, 0);
+  border-bottom: 1px solid rgb(0, 110, 0);
+  text-decoration: none;
+}
+.fas.fa-angle-up{
+  display:none;
+}
+.sidebar.show-sidebar{
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 3;
+}
+@media (min-width: 1200px) {
+i.fa.fa-bars{
+    display:none;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    i.fa.fa-bars{
+        display:none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    i.fa.fa-bars{
+        display:none;
+    }
+}
+
+@media (max-width: 767px) {
+.nav-bar{
+    display:none;
+}
+.IMG{
+    text-align: center;
+}
+li {
+    list-style-type: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .fa.fa-bars{
+    position: sticky;
+    margin-top:15px;
+}
+}
+
+@media (max-width: 480px) {
+  .nav-bar{
+    display:none;
+}
+li {
+    list-style-type: none;
+  }
+}
+.fa.fa-bars{
+    position: sticky;
+    margin-top:15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background: #ebebeb;
+  }
+  
+  .menu a {
+    display: block;
+    font-size: 20px;
+    padding: 5px 5px;
+    padding-top:5px;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s linear;
+    text-decoration: none;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    height: 200%;
+    display:flex;
+    transition: all 0.3s linear;
+    transform: translate(-100%);
+  }
+  
+  .show-sidebar {
+    transform: translate(0);
+  }
+  
+  .fa-bars {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .fa-bars:hover {
+    color: rgb(125, 125, 125);
+  }
+  
+  .fa-times {
+    font-size: 1.5rem;
+    color: #000000;
+    cursor: pointer;
+    transform: translate(0px, 0px);
+  }
+  
+  .fa-times:hover {
+    color: rgb(157, 157, 157);
+  }
+  
+  .sidebar-header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  
+  .logo {
+    margin-left: -15px;
+  }
+  li a{
     color:#000000;
-    font-size:25px;
-    border-width:100px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    text-decoration: none;
 }
+@media (min-width:481px) and (max-width:549px){
+   
+}
+ .img1{
+  color:#000000;
+ } 
+ .img2{
+  color:#000000;
+ }
 
-li a:hover{
-    
-    background: #55a153;
-    border-style:none;
-    border-radius:25px;
-    color: #ffffff !important;
-    text-decoration: none;
-    
-}
+

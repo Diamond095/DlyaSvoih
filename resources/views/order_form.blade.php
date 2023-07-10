@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="resources/css/style_of_form_order.css">
+<link rel="stylesheet" href="http://dlyasvoih.by/public/css/style_of_form_order.css">
 
- @include('layouts.header')
+
 <form action="" method="post">
+<div class="form-order"> 
 <div class="form-group">
     <label for="phone-input">Имя<span>Фамилия</span></label>
 </div>
@@ -27,7 +28,7 @@
 </div>
 <div>
     <div class="form-group">
-        <label for="phone-input">Улица<span>Дом</span><span>Квартира</span></label>
+    <label class="text-input" for="phone-input"><span class="text">Улица</span><span class="text">Дом</span><span class="text">Квартира</span></label>
     </div>
 </div>
 <div class="form">
@@ -57,5 +58,6 @@
 </div>
 
 <button type="submit" class="btn btn-primary">Заказать</button>
+</div>
 </form>
 @include('layouts.footer')
